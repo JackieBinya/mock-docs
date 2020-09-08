@@ -1,22 +1,19 @@
 <template>
   <header class="header" :class="{'header--scrolled' : pageScrolled}">
-    <Logo :color="logoColor" />
+    <Logo />
     <nav class="nav">
-      <ThemeSwitch v-on:theme-change="updateLogo" />
       <MenuToggle v-if="menuToggle" />
     </nav>
   </header>
 </template>
 
 <script>
-import ThemeSwitch from '~/components/ThemeSwitch.vue'
 import MenuToggle from '~/components/MenuToggle.vue'
 import Logo from '~/components/Logo.vue'
 import throttle from 'lodash/throttle'
 
 export default {
   components: {
-    ThemeSwitch,
     MenuToggle,
     Logo
   },
