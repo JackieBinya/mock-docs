@@ -6,6 +6,8 @@ import '~/assets/scss/globals.scss'
 import Vuex from 'vuex'
 require('typeface-source-sans-pro')
 
+import '@creativecommons/vocabulary/css/vocabulary.css'
+
 export default function (Vue, { router, head, isClient, appOptions }) {
   Vue.use(Vuex)
 
