@@ -68,10 +68,9 @@ export default {
   transition: padding .15s linear, background .15s linear, border-color .15s linear;
   will-change: padding, background;
   border-bottom: 1px solid transparent;
+  background-color: #fff;
 
-  @include respond-above(sm) {
-    padding: 30px;
-  }
+  @include respond-above(sm) ;
 
   &--scrolled {
     @include respond-below(sm) {

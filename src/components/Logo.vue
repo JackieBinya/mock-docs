@@ -7,7 +7,7 @@
     </transition>
     <transition name="theme">
       <div v-if="color == 'bright'">
-        <g-image src="~/assets/img/logo-dark.svg" alt="logo" />
+        <g-image src="~/assets/img/mock.svg" alt="logo" />
       </div>
     </transition>
   </g-link>
@@ -34,7 +34,8 @@ export default {
   perspective: 200px;
 
   div {
-    height: 40px;
+    height: 1.8em;
+    width: 12em;
     position: absolute;
     top: 0;
     left: 0;
