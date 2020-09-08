@@ -1,14 +1,19 @@
 <template>
-  <Layout :sidebar="false">
+  <Layout :sidebar="true">
     <div class="content">
-      <h1>{{ $static.metadata.siteName }} - {{ this.description }}</h1>
-      <nav>
-        <!-- To use other icons here, you need to import them in the Shortcut component -->
-        <Shortcut link="/getting-started" text="Introduction" icon="play-icon" />
-        <Shortcut link="/theme-configuration" text="Configuration" icon="sliders-icon" />
-        <Shortcut link="/theme-configuration#changing-colors" text="Change colors" icon="eye-icon" />
-      </nav>
-      <GitLink class="git" size="large" />
+      <h1>{{ $static.metadata.siteName }}</h1>
+      <div class="screenshot">
+        <p>Mock Screenshot</p>
+      </div>
+      <p>The CC WordPress Base Theme is a universal theme for all front-facing Creative Commons websites.</p>
+      <div class="features">
+        <strong>Features</strong>
+        <ul>
+          <li>Responsive site and images</li>
+          <li>Customizable</li>
+          <li></li>
+        </ul>
+      </div>
     </div>
   </Layout>
 </template>
@@ -22,14 +27,7 @@ query {
 </static-query>
 
 <script>
-import GitLink from '~/components/GitLink.vue'
-import Shortcut from '~/components/Shortcut.vue'
-
 export default {
-  components: {
-    GitLink,
-    Shortcut
-  },
   data() {
     return {
       description: 'The ultimate static generated documentation theme for the JAM-stack'
@@ -52,10 +50,21 @@ export default {
   flex-direction: column;
 }
 
+.screenshot{
+  width: 100%;
+  height: 30em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: aqua;
+  margin-bottom: 2em;
+  font-weight: 500;
+}
+
 h1 {
   text-align: center;
   max-width: 600px;
-  margin: 1.5em auto 1.5em;
+  margin: 1em auto 1em;
 
   @include respond-above(md) {
     max-width: 1000px;
